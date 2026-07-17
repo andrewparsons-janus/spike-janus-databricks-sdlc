@@ -87,4 +87,4 @@ Sparse checkout controls which paths are cloned; it does not change their relati
 The projects in this repository demonstrate the tradeoff:
 
 - [`src_style`](./src_style/README.md): conventional `src/` layout, preferred for package isolation and distribution correctness, but not directly importable under the constraints above.
-- [`flat_style`](./flat_style/README.md): conventional flat layout, directly importable as `flat_style` when its project root is an import root, but with weaker isolation. A monorepo root alone is not enough when the project and package share the name `flat_style`.
+- [`flat_style`](./flat_style/README.md): conventional flat layout. From the Databricks-provided monorepo-root import path, its source-tree import is `flat_style.flat_style...`; its shorter Poetry-installed import is `flat_style...`. This illustrates the naming tradeoff of an independently managed flat-layout project inside a monorepo.
